@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pixectra</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="facebook_id">1929234940653651</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_font_path">fonts/MontserratRegular.ttf</string>
+    <string name="disconnect">DISCONNECT</string>
+    <string name="connect">CONNECT</string>
+    <string name="google_token">802114397478-121sl0s0bfr0ts2ojchta7b22lc98q5n.apps.googleusercontent.com</string>
+    <string name="Rs">\u20B9</string>
+    <string name="io.branch.apiKey" translatable="false">key_live_omFS21l61XLXuq5CNE59OfecEBhm0ZoT</string>
+</resources>

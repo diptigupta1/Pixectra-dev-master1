@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pixectra.app">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <application
+        android:allowBackup="true"
+        android:name="io.branch.referral.BranchApp"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_id" />
+
+        <activity android:name=".MobileVerifyActivity" />
+        <activity android:name=".MyProfileActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="pixectra.com"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="pixectra//"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".PicasaActivity"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_id" />
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+              </activity>
+        <!-- Branch init -->
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_omFS21l61XLXuq5CNE59OfecEBhm0ZoT" />
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_aevO93g145GYFxZwITaswiohwElf5YnX" />
+
+        <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+        <!-- Branch install referrer tracking -->
+        <receiver android:name="io.branch.referral.InstallListener" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".ShippingAddressForm" />
+        <activity android:name=".SelectAddressActivity" />
+        <activity android:name=".PhotobookActivity" />
+        <activity android:name=".PosterActivity" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".LActivity" />
+        <activity
+            android:name=".ImageSelectActivity"
+            android:label="Select Images.." />
+        <activity android:name=".LinkedAccounts" />
+        <activity android:name=".FacebookActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="24d096531d852632ab1c7f98d4485791c5e5eaa1" />
+
+        <activity android:name=".CroppingActivity"></activity>
+        <activity android:name=".Checkout" />
+        <activity android:name=".PayUMoneyActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="24d096531d852632ab1c7f98d4485791c5e5eaa1" />
+    </application>
+
+</manifest>
